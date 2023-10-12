@@ -6,5 +6,10 @@
   <body>
     <h1>Welcome <%= user.name %></h1>
     <h3>E-mail: <%= user.email %></h3>
+    <ul>
+      Skills: <% user.skils.forEach((item)=>{ %>
+      <li><%= item %></li>
+      <% }) %>
+    </ul>
   </body>
 </html>

@@ -29,10 +29,14 @@ app.get('/help',(req, res) =>{
 app.get('/profile',(req, res) =>{
     const user ={
         name:'tushar',
-        email:'tushar@gmail.com'
+        email:'tushar@gmail.com',
+        skils:['php','js','c++'],
 
     }
     res.render('profile',{user:user});
+});
+app.get('/login',(req, res) =>{
+    res.render('login');
 });
 app.get('*',(req, res) =>{
     res.sendFile(`${publicpath}/404.html`);
